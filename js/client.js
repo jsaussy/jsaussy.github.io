@@ -32,6 +32,18 @@ TrelloPowerUp.initialize(
             });
           },
         },
+        {
+          text: "Open datetime",
+          callback: function (t) {
+            t.popup({
+              type: "date",
+              title: "DaTETime!!!!",
+              callback: function (t, opts) {
+                console.log(opts.date);
+              },
+            });
+          },
+        },
       ];
     },
     "board-buttons": function (t, options) {
