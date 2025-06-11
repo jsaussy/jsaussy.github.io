@@ -36,7 +36,7 @@ TrelloPowerUp.initialize(
           text: "Open datetime",
           callback: function (t) {
             t.popup({
-              type: "date",
+              type: "datetime",
               title: "DaTETime!!!!",
               callback: function (t, opts) {
                 console.log(opts.date);
