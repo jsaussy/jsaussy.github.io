@@ -68,7 +68,7 @@ TrelloPowerUp.initialize({
             callback: function(t) {
                  return t.boardBar({
       // required URL to load in the iframe
-      url: './create-recurrence.html',
+      url: './iframe.html',
       // optional arguments to be passed to the iframe as query parameters
       // access later with t.arg('text')
       args: { text: 'Hello' },
