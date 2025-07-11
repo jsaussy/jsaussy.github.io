@@ -90,6 +90,31 @@ TrelloPowerUp.initialize(
             });
           },
         },
+        {
+          text: "Open Modal",
+          callback: function (t) {
+            return t.modal({
+              url: "./modal.html",
+              args: { text: "Hello" },
+              accentColor: "#F2D600",
+              fullscreen: true,
+              callback: () => console.log("Goodbye."),
+              title: "This is a modal",
+              actions: [
+                {
+                  url: "https://google.com",
+                  alt: "Leftmost",
+                  position: "left",
+                },
+                {
+                  callback: () => console.log(":tada:"),
+                  alt: "Right side",
+                  position: "right",
+                },
+              ],
+            });
+          },
+        },
       ];
     },
   },
