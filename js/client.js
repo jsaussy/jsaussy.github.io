@@ -93,8 +93,8 @@ TrelloPowerUp.initialize(
         {
           text: "Open Modal",
           icon: {
-            dark: "../icon-gray.svg",
-            light: "../icon-gray.svg",
+            dark: "./icon-gray.svg",
+            light: "./icon-gray.svg",
           },
           callback: function (t) {
             return t.modal({
