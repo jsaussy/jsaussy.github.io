@@ -120,19 +120,19 @@ TrelloPowerUp.initialize(
           },
         },
                 {
-          text: "Open Modal",
+          text: "Open board bar",
           icon: {
             dark: "./icon-gray.svg",
             light: "./icon-gray.svg",
           },
           callback: function (t) {
-            return t.modal({
+            return t.boardBar({
               url: "./modal.html",
               args: { text: "Hello" },
               accentColor: "#F2D600",
               fullscreen: true,
               callback: () => console.log("Goodbye."),
-              title: "This is a board bard",
+              title: "This is a board bar",
               actions: [
                 {
                   url: "https://google.com",
