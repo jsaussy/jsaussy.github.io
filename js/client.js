@@ -119,6 +119,35 @@ TrelloPowerUp.initialize(
             });
           },
         },
+                {
+          text: "Open Modal",
+          icon: {
+            dark: "./icon-gray.svg",
+            light: "./icon-gray.svg",
+          },
+          callback: function (t) {
+            return t.modal({
+              url: "./modal.html",
+              args: { text: "Hello" },
+              accentColor: "#F2D600",
+              fullscreen: true,
+              callback: () => console.log("Goodbye."),
+              title: "This is a board bard",
+              actions: [
+                {
+                  url: "https://google.com",
+                  alt: "Leftmost",
+                  position: "left",
+                },
+                {
+                  callback: () => console.log(":tada:"),
+                  alt: "Right side",
+                  position: "right",
+                },
+              ],
+            });
+          },
+        },
       ];
     },
   },
