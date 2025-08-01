@@ -93,8 +93,8 @@ TrelloPowerUp.initialize(
         {
           text: "Open Modal",
           icon: {
-            dark: "./icon-gray.svg",
-            light: "./icon-gray.svg",
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
           },
           callback: function (t) {
             return t.modal({
@@ -119,11 +119,11 @@ TrelloPowerUp.initialize(
             });
           },
         },
-                {
+        {
           text: "Open board bar",
           icon: {
-            dark: "./icon-gray.svg",
-            light: "./icon-gray.svg",
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
           },
           callback: function (t) {
             return t.boardBar({
@@ -133,6 +133,36 @@ TrelloPowerUp.initialize(
               fullscreen: true,
               callback: () => console.log("Goodbye."),
               title: "This is a board bar",
+              actions: [
+                {
+                  url: "https://google.com",
+                  alt: "Leftmost",
+                  position: "left",
+                },
+                {
+                  callback: () => console.log(":tada:"),
+                  alt: "Right side",
+                  position: "right",
+                },
+              ],
+            });
+          },
+        },
+                {
+          text: "Open board bar (resizable)",
+          icon: {
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
+          },
+          callback: function (t) {
+            return t.boardBar({
+              url: "./modal.html",
+              args: { text: "Hello" },
+              accentColor: "#F2D600",
+              fullscreen: true,
+              callback: () => console.log("Goodbye."),
+              title: "This is a board bar",
+              resizable: true,
               actions: [
                 {
                   url: "https://google.com",
