@@ -97,6 +97,9 @@ TrelloPowerUp.initialize(
             light: "https://jsaussy.github.io/icon-gray.svg",
           },
           callback: function (t) {
+              t.lists("all").then(function (lists) {
+      console.log(JSON.stringify(lists, null, 2));
+  });
             return t.modal({
               url: "./modal.html",
               args: { text: "Hello" },
