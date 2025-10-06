@@ -178,6 +178,21 @@ TrelloPowerUp.initialize(
             });
           },
         },
+                {
+          text: "Open Popup iframe",
+          icon: {
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
+          },
+          callback: function (t, opts) {
+  return t.popup({
+    title: 'Iframe popup',
+    url: './modal.html',
+    args: { text: 'Hello' },
+    height: 278 // initial height, can be changed later
+  });
+},
+        },
       ];
     },
   },
