@@ -7,7 +7,7 @@ TrelloPowerUp.initialize(
     "board-panel": function (t, options) {
       return {
         title: 'test',
-        iframeUrl: './modal.html'
+        iframeUrl: t.relativeUrl('./modal.html')
       };
     },
     "card-buttons": function (t, options) {
