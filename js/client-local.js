@@ -4,6 +4,12 @@ var Promise = TrelloPowerUp.Promise;
 
 TrelloPowerUp.initialize(
   {
+    "board-panel": function (t, options) {
+      return {
+        title: 'test',
+        iframeUrl: './modal.html'
+      };
+    },
     "card-buttons": function (t, options) {
       return [
         {
