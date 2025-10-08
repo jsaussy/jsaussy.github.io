@@ -2,11 +2,11 @@ const t = window.TrelloPowerUp.iframe({targetOrigin: "http://localhost:2999/"});
 
   t.lists("all").then(function (lists) {
       document.getElementById('list').innerHTML = "Here's a list of cards on this board:";
-      lists.map(({list}) => {
+      lists.map((list) => {
         if (!list) {
           return;
         }
-        list.cards?.map(({card}) => {
+        list.cards?.map((card) => {
           if (!card) {
             return;
           }
