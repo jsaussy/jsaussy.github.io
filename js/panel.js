@@ -7,7 +7,7 @@ const t = window.TrelloPowerUp.iframe({targetOrigin: "http://localhost:2999/"});
           const cardEl = document.createElement('div');
           cardEl.appendChild(document.createTextNode(card.name));
           document.getElementById('list').appendChild(cardEl);
-        }
+        });
       }
     );
   }).catch(e => console.error(e));
