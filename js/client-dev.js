@@ -87,7 +87,7 @@ TrelloPowerUp.initialize(
           callback: function (t, opts) {
   return t.popup({
     title: 'Iframe popup',
-    url: './modal.html',
+    url: './modal-dev.html',
     args: { text: 'Hello' },
     height: 278 // initial height, can be changed later
   });
