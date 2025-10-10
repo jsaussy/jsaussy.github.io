@@ -10,6 +10,12 @@ TrelloPowerUp.initialize(
         iframeUrl: t.signUrl(TrelloPowerUp.util.relativeUrl('./panel.html'))
       };
     },
+    "card-back-panel": function (t, options) {
+      return {
+        title: 'test',
+        iframeUrl: t.signUrl(TrelloPowerUp.util.relativeUrl('./panel.html'))
+      };
+    },
     "card-buttons": function (t, options) {
       return [
         {
