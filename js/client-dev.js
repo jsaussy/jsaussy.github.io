@@ -4,6 +4,16 @@ var Promise = TrelloPowerUp.Promise;
 
 TrelloPowerUp.initialize(
   {
+    "card-detail-badges": function (t, options) {
+      return {
+        text: "☝ Test",
+        title: "TEST API IDLE",
+        color: 'red',
+        callback: () => {
+            alert('test');
+        }
+      }
+    },
     "card-buttons": function (t, options) {
       return [
         {
