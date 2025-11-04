@@ -2,18 +2,26 @@
 
 var Promise = TrelloPowerUp.Promise;
 
-TrelloPowerUp.initialize(
-  {
-    "card-detail-badges": function (t, options) {
-      return {
+function cardDetailBadges(trello, options) {
+    return [
+        testButton(trello),
+    ]
+}
+
+function testButton(trello) {
+    return {
         text: "☝ Test",
         title: "TEST API IDLE",
         color: 'red',
         callback: () => {
             alert('test');
         }
-      }
-    },
+    }
+} 
+
+TrelloPowerUp.initialize(
+  {
+    "card-detail-badges": cardDetailBadges,
     "card-buttons": function (t, options) {
       return [
         {
