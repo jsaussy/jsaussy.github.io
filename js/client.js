@@ -68,6 +68,10 @@ TrelloPowerUp.initialize(
       return [
         {
           text: "Open confirm",
+                      icon: {
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
+          },
           callback: function (t) {
             return t.popup({
               title: "Confirm",
@@ -82,6 +86,10 @@ TrelloPowerUp.initialize(
         },
         {
           text: "Open list",
+                      icon: {
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
+          },
           callback: function (t) {
             return t.popup({
               title: "List!",
