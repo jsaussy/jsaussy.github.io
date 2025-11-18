@@ -30,7 +30,7 @@ const cardDetailBadges = function (t, opts) {
             // badges to refresh.
             // You can mix and match between static and dynamic
             text: "Static",
-            icon: HYPERDEV_ICON, // for card front badges only
+            icon: "./icon-gray.svg",
             color: null,
           },
         ];
