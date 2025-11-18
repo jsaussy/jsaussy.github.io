@@ -31,7 +31,7 @@ const cardDetailBadges = function (t, opts) {
             // You can mix and match between static and dynamic
             text: "Static",
             icon: "https://jsaussy.github.io/icon-gray.svg",
-            color: null,
+            color: "red",
           },
         ];
       });
