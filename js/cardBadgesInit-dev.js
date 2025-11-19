@@ -74,6 +74,12 @@ const cardDetailBadges = function (t, opts) {
             color: "light-gray",
           },
           {
+            text: "Monochrome",
+            icon: "https://jsaussy.github.io/error.svg",
+            color: "light-gray",
+            monochrome: true,
+          },
+          {
             text: "Not monochrome",
             icon: "https://jsaussy.github.io/error.svg",
             color: "light-gray",
