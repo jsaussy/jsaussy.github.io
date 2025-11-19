@@ -73,6 +73,12 @@ const cardDetailBadges = function (t, opts) {
             icon: "https://jsaussy.github.io/icon-gray.svg",
             color: "light-gray",
           },
+          {
+            text: "Not monochrome",
+            icon: "https://jsaussy.github.io/error.svg",
+            color: "light-gray",
+            monochrome: false,
+          },
         ];
       });
   };
