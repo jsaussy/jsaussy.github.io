@@ -29,9 +29,49 @@ const cardDetailBadges = function (t, opts) {
             // It's best to use static badges unless you need your
             // badges to refresh.
             // You can mix and match between static and dynamic
-            text: "Static",
+            text: "Static Red",
             icon: "https://jsaussy.github.io/icon-gray.svg",
             color: "red",
+          },
+          {
+            text: "Yellow",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "yellow",
+          },
+          {
+            text: "Blue",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "blue",
+          },
+          {
+            text: "Orange",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "orange",
+          },
+          {
+            text: "Purple",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "purple",
+          },
+          {
+            text: "Pink",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "pink",
+          },
+          {
+            text: "Sky",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "sky",
+          },
+          {
+            text: "Lime",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "lime",
+          },
+          {
+            text: "Light Gray",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "light-gray",
           },
         ];
       });
