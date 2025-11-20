@@ -1,4 +1,4 @@
-var t = window.TrelloPowerUp.iframe();
+const t = window.TrelloPowerUp.iframe({targetOrigin: "http://localhost:2999/"});
 
 // you can access arguments passed to your iframe like so
 var arg = t.arg('arg');
