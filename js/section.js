@@ -10,7 +10,7 @@ t.render(function(){
   t.card('attachments')
   .get('attachments')
   .filter(function(attachment){
-    return attachment.url.indexOf('http://www.nps.gov/yell/') == 0;
+    return attachment.url.indexOf('https://www.nps.gov/yell/') == 0;
   })
   .then(function(yellowstoneAttachments){
     var urls = yellowstoneAttachments.map(function(a){ return a.url; });
