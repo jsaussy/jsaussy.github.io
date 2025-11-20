@@ -34,7 +34,7 @@ TrelloPowerUp.initialize(
         title: 'Example Attachment Section: Yellowstone',
         content: {
           type: 'iframe',
-          url: t.signUrl('./section.html', {
+          url: t.signUrl('./section2.html', {
             arg: 'you can pass your section args here'
           }),
           height: 230
