@@ -25,6 +25,15 @@ const cardDetailBadges = function (t, opts) {
               };
             },
           },
+            {
+                dynamic: function() {
+                    return {
+                        text: cardName,
+                        icon: "https://jsaussy.github.io/icon-gray.svg",
+                        color: "red",
+                    };
+                }
+            },
           {
             // It's best to use static badges unless you need your
             // badges to refresh.
