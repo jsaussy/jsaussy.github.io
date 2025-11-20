@@ -23,7 +23,7 @@ TrelloPowerUp.initialize(
   {
       "attachment-sections": function(t, options){
     var claimed = options.entries.filter(function (attachment) {
-      return attachment.url.indexOf('http://www.nps.gov/yell/') === 0;
+      return attachment.url.indexOf('https://www.nps.gov/yell/') === 0;
     });
 
     if (claimed && claimed.length > 0) {
