@@ -21,6 +21,29 @@ function testButton(trello) {
 
 TrelloPowerUp.initialize(
   {
+            "attachment-sections": function(t, options){
+    var claimed = options.entries.filter(function (attachment) {
+      return attachment.url.indexOf('https://www.nps.gov/yell/') === 0;
+    });
+
+    if (claimed && claimed.length > 0) {
+      return [{
+        id: 'Yellowstone',
+        claimed: claimed,
+        icon: "https://jsaussy.github.io/icon-gray.svg",
+        title: 'Example Attachment Section: Yellowstone',
+        content: {
+          type: 'iframe',
+          url: t.signUrl('./section-staging.html', {
+            arg: 'you can pass your section args here'
+          }),
+          height: 230
+        }
+      }];
+    } else {
+      return [];
+    }
+  },
     "card-detail-badges": cardDetailBadges,
     "card-buttons": function (t, options) {
       return [
