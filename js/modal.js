@@ -1,4 +1,4 @@
-const t = window.TrelloPowerUp.iframe();
+const t = window.TrelloPowerUp.iframe({targetOrigin: "https://trellis.coffee"});
 
   t.lists("all").then(function (lists) {
       console.log(JSON.stringify(lists, null, 2));
@@ -9,4 +9,8 @@ t.render(() => {
   t.lists("all").then(function (lists) {
       console.log(JSON.stringify(lists, null, 2));
   }).catch(e => console.error(e));
+});
+
+document.getElementById("modalButton").addEventListener("click", () => {
+  t.modal();
 });
