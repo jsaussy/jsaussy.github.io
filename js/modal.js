@@ -12,5 +12,24 @@ t.render(() => {
 });
 
 document.getElementById("modalButton").addEventListener("click", () => {
-  t.modal();
+  t.modal({
+              url: "./modal2.html",
+              args: { text: "Hello" },
+              accentColor: "#F2D600",
+              fullscreen: true,
+              callback: () => console.log("Goodbye."),
+              title: "This is a modal again",
+              actions: [
+                {
+                  url: "https://google.com",
+                  alt: "Leftmost",
+                  position: "left",
+                },
+                {
+                  callback: () => console.log(":tada:"),
+                  alt: "Right side",
+                  position: "right",
+                },
+              ],
+            });
 });
