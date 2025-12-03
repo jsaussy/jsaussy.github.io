@@ -10,12 +10,29 @@ TrelloPowerUp.initialize(
         iframeUrl: t.signUrl(TrelloPowerUp.util.relativeUrl('./panel.html'))
       };
     },
-    "card-back-panel": function (t, options) {
-      return {
-        title: 'test',
-        iframeUrl: t.signUrl(TrelloPowerUp.util.relativeUrl('./panel.html'))
-      };
-    },
+    "card-back-section": function(t, options){
+    return {
+      title: 'My Card Back Section',
+      icon: "https://jsaussy.github.io/icon-gray.svg",
+      content: {
+        type: 'iframe',
+        url: t.signUrl('./section.html'),
+        height: 230,
+      },
+      action: {
+        text: 'My Action',
+        callback: (t) => t.popup({
+              title: "Confirm",
+              type: "confirm",
+              message: "Confirm?",
+              confirmText: "Confirm!",
+              onConfirm: () => {
+                console.log("confirm");
+              },
+            }),
+      }
+    };
+  },
     "card-buttons": function (t, options) {
       return [
         {
