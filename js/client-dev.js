@@ -51,7 +51,7 @@ TrelloPowerUp.initialize(
       content: {
         type: 'iframe',
         url: t.signUrl('./modal-dev.html'),
-        height: 230,
+        height: 500,
       },
       action: {
         text: 'My Action',
