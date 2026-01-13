@@ -125,6 +125,35 @@ TrelloPowerUp.initialize(
     },
     "board-buttons": function (t, options) {
       return [
+          {
+          text: "Open Modal",
+          icon: {
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
+          },
+          callback: function (t) {
+            return t.modal({
+              url: "./modal.html",
+              args: { text: "Hello" },
+              accentColor: "#4E5C74",
+              fullscreen: true,
+              callback: () => console.log("Goodbye."),
+              title: "This is a modal",
+              actions: [
+                {
+                  url: "https://google.com",
+                  alt: "Leftmost",
+                  position: "left",
+                },
+                {
+                  callback: () => console.log(":tada:"),
+                  alt: "Right side",
+                  position: "right",
+                },
+              ],
+            });
+          },
+        },
         {
           text: "Open confirm",
           callback: function (t) {
