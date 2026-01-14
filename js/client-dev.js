@@ -150,6 +150,13 @@ TrelloPowerUp.initialize(
                   alt: "Right side",
                   position: "right",
                 },
+                {
+                  callback: () => t.closeModal(),
+                  alt: "Close",
+                  position: "right",
+                  icon:"https://jsaussy.github.io/icon-gray.svg",
+
+                },
               ],
             });
           },
