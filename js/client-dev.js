@@ -80,15 +80,13 @@ TrelloPowerUp.initialize(
       },
       action: {
         text: 'My Action',
-        callback: (t) => t.popup({
-              title: "Confirm",
-              type: "confirm",
-              message: "Confirm?",
-              confirmText: "Confirm!",
-              onConfirm: () => {
-                console.log("confirm");
-              },
-            }),
+        callback: (t) =>  t.popup({
+    title: 'Iframe popup',
+    url: './popupIframe.html',
+    args: { text: 'Hello' },
+    height: 278, // initial height, can be changed later,
+    callback: function (t, opts) {console.log("hide");console.log(opts);},
+  });
       }
     };
   },
