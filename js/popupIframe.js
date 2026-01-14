@@ -13,7 +13,7 @@ t.render(() => {
         onConfirm: function(t, opts) {
           console.log('CONFIRM');
         },
-        confirmStyle?: 'primary'
+        confirmStyle: 'primary'
     });
   });
 });
