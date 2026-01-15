@@ -22,6 +22,7 @@ t.render(() => {
           console.log('CONFIRMED!');
         },
         confirmStyle: 'primary',
+        mouseEvent: e,
     });
   });
 });
