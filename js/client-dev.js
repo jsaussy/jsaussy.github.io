@@ -131,7 +131,7 @@ TrelloPowerUp.initialize(
           },
           callback: function (t) {
             return t.modal({
-              url: "./modal.html",
+              url: "./modal-dev.html",
               args: { text: "Hello" },
               accentColor: "#4E5C74",
               fullscreen: true,
@@ -219,7 +219,7 @@ TrelloPowerUp.initialize(
           },
           callback: function (t) {
             return t.boardBar({
-              url: "./modal.html",
+              url: "./modal-dev.html",
               args: { text: "Hello" },
               accentColor: "#F2D600",
               fullscreen: true,
