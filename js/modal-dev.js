@@ -11,4 +11,17 @@ t.render(() => {
   }).then(function () {
     return t.sizeTo('#content');
   }).catch(e => console.error(e));
+  document.getElementById('buttonToClick').addEventListener('click', (e) => {
+    console.log('Popup button clicked');
+    t.popup({
+        type: 'confirm',
+        title: 'confirm from button',
+        message: 'Confirm?',
+        confirmText: 'Confirm!',
+        onConfirm: function(t, opts) => {
+          console.log('CONFIRMED!');
+        },
+        confirmStyle: 'primary',
+    });
+  });
 });
