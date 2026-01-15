@@ -18,7 +18,7 @@ t.render(() => {
         title: 'confirm from button',
         message: 'Confirm?',
         confirmText: 'Confirm!',
-        onConfirm: function(t, opts) => {
+        onConfirm: function(t, opts) {
           console.log('CONFIRMED!');
         },
         confirmStyle: 'primary',
