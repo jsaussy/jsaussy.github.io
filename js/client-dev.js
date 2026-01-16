@@ -119,6 +119,44 @@ TrelloPowerUp.initialize(
             });
           },
         },
+        {
+          text: "Open list",
+          callback: function (t) {
+            return t.popup({
+              title: "List!",
+              items: [
+                {
+          text: "Open Popup iframe",
+          icon: {
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
+          },
+          callback: function (t, opts) {
+  return t.popup({
+    title: 'Iframe popup',
+    url: './modal-dev.html',
+    args: { text: 'Hello' },
+    height: 278, // initial height, can be changed later,
+    callback: function (t, opts) {console.log("hide");console.log(opts);},
+  });
+},
+        },
+                {
+                  text: "Item 2",
+                  callback: function (t, opts) {
+                    console.log("Item 2");
+                  },
+                },
+                {
+                  text: "Item 3",
+                  callback: function (t, opts) {
+                    console.log("Item 3");
+                  },
+                },
+              ],
+            });
+          }
+        },
       ];
     },
     "board-buttons": function (t, options) {
