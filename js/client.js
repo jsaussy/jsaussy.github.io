@@ -19,8 +19,39 @@ function testButton(trello) {
     }
 } 
 
+var formatNPSUrl = function (t, url) {
+  if (!/^https?:\/\/www\.nps\.gov\/[a-z]{4}\//.test(url)) {
+    return null;
+  }
+  var parkShort = /^https?:\/\/www\.nps\.gov\/([a-z]{4})\//.exec(url)[1];
+  if (parkShort && parkMap[parkShort]) {
+    return parkMap[parkShort];
+  } else {
+    return null;
+  }
+};
+
+window.TrelloPowerUp.initialize({
+
+});
+
+
 TrelloPowerUp.initialize(
   {
+        "attachment-thumbnail": function (t, options) {
+    var parkName = formatNPSUrl(t, options.url);
+    if (parkName){
+      return {
+        title: parkName,
+        image: {
+          url: 'https://jsaussy.github.io/nps.svg',
+          logo: true
+        }
+      };
+    } else {
+      throw t.NotHandled();
+    }
+  },
             "attachment-sections": function(t, options){
     var claimed = options.entries.filter(function (attachment) {
       return attachment.url.indexOf('https://www.nps.gov/yell/') === 0;
