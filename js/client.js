@@ -87,7 +87,7 @@ TrelloPowerUp.initialize(
       action: {
         text: 'My Action',
         callback: (t) => t.popup({
-              title: "Confirm",
+              title: "Popover",
               type: "confirm",
               message: "Confirm?",
               confirmText: "Confirm!",
