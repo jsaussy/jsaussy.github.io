@@ -31,11 +31,6 @@ var formatNPSUrl = function (t, url) {
   }
 };
 
-window.TrelloPowerUp.initialize({
-
-});
-
-
 TrelloPowerUp.initialize(
   {
         "attachment-thumbnail": function (t, options) {
