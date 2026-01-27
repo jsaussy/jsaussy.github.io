@@ -81,7 +81,7 @@ TrelloPowerUp.initialize(
       icon: "https://jsaussy.github.io/icon-gray.svg",
       content: {
         type: 'iframe',
-        url: t.signUrl('./section.html'),
+        url: t.signUrl('./cardBackSection.html'),
         height: 230,
       },
       action: {
