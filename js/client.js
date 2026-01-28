@@ -235,10 +235,6 @@ TrelloPowerUp.initialize(
       ];
     },
     "board-buttons": function (t, options) {
-      t.alert({
-        message: 'hello there',
-      });
-      return [];
       return [
         {
           text: "Open confirm",
