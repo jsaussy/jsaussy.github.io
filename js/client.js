@@ -11,7 +11,7 @@ function cardDetailBadges(trello, options) {
             color: "green"
         },
         {
-            dyanmic: function () {
+            dynamic: function () {
                 return {
                     title: "Dynamic detail badge",
                     text: "Dynamic "  + (Math.random() * 100).toFixed(0).toString(),
