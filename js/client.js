@@ -139,6 +139,25 @@ TrelloPowerUp.initialize(
   },
     "card-badges": cardBadges,
     "card-detail-badges": cardDetailBadges,
+    "list-actions": function (t) {
+        return t.list('name', 'id')
+            .then(function (list) {
+              return [{
+                text: "Get List Stats",
+                callback: function (t) {
+                    return t.popup({
+                      title: "Confirm",
+                      type: "confirm",
+                      message: "Confirm?",
+                      confirmText: "Confirm!",
+                      onConfirm: () => {
+                        console.log("confirm");
+                      },
+                    });
+                }
+              }];
+        });
+  },
     "card-buttons": function (t, options) {
       return [
         {
