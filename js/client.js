@@ -2,12 +2,6 @@
 
 var Promise = TrelloPowerUp.Promise;
 
-var t = window.TrelloPowerUp.iframe();
-
-t.alert({
-  message: 'hello there'
-});
-
 function cardDetailBadges(trello, options) {
     return [
         // testButton(trello),
@@ -241,6 +235,9 @@ TrelloPowerUp.initialize(
       ];
     },
     "board-buttons": function (t, options) {
+      t.alert({
+        message: 'hello there',
+      });
       return [
         {
           text: "Open confirm",
