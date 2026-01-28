@@ -19,6 +19,35 @@ function testButton(trello) {
     }
 } 
 
+const cardBadges = function (t, opts) {
+  return t.card("name")
+  .get("name")
+  .then(function (cardName) {
+    const parts = cardName.split(" ");
+    if (parts.length !== 3) {
+      return [];
+    }
+    const [color, type ] = parts;
+    const badge = {
+      icon: "https://jsaussy.github.io/icon-gray.svg",
+    };
+    if (type === 'static') {
+      badge.text = 'Static';
+    } else if (type === 'dynamic') {
+      badge.text = 'Dynamic' + (Math.random() * 100).toFixed(0).toString();
+    } else {
+      return [];
+    }
+    if (['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink', 'sky', 'lime', 'light-gray'].includes(color.toLowerCase())) {
+      badge.color = color.toLowerCase();
+    }
+    if (type === 'dynamic') {
+      return [{dynamic: function(){return badge}, refresh: 10}];
+    }
+    return [badge];
+  });
+};
+
 var formatNPSUrl = function (t, url) {
   if (!/^https?:\/\/www\.nps\.gov\/[a-z]{4}\//.test(url)) {
     return null;
@@ -93,6 +122,7 @@ TrelloPowerUp.initialize(
       }
     };
   },
+    "card-badges": cardBadges,
     "card-detail-badges": cardDetailBadges,
     "card-buttons": function (t, options) {
       return [
