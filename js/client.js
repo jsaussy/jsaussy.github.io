@@ -63,6 +63,14 @@ const cardBadges = function (t, opts) {
   });
 };
 
+const saveAttachment = function (t, options) {
+    return {
+      callback: function (t, opts) {
+        console.log('Save!);
+      },
+    };
+  };
+
 var formatNPSUrl = function (t, url) {
   if (!/^https?:\/\/www\.nps\.gov\/[a-z]{4}\//.test(url)) {
     return null;
@@ -139,6 +147,7 @@ TrelloPowerUp.initialize(
   },
     "card-badges": cardBadges,
     "card-detail-badges": cardDetailBadges,
+    "save-attachment": saveAttachment,
     "list-actions": function (t) {
         return t.list('name', 'id')
             .then(function (list) {
