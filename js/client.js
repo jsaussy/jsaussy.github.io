@@ -238,6 +238,7 @@ TrelloPowerUp.initialize(
       t.alert({
         message: 'hello there',
       });
+      return [];
       return [
         {
           text: "Open confirm",
