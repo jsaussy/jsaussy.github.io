@@ -4,7 +4,22 @@ var Promise = TrelloPowerUp.Promise;
 
 function cardDetailBadges(trello, options) {
     return [
-        testButton(trello),
+        // testButton(trello),
+        {
+            title: "Detail badge",
+            text: "Static",
+            color: "green"
+        },
+        {
+            dyanmic: function () {
+                return {
+                    title: "Dynamic detail badge",
+                    text: "Dynamic "  + (Math.random() * 100).toFixed(0).toString(),
+                    color: "red",
+                };
+            },
+            refresh: 10,
+        }
     ]
 }
 
