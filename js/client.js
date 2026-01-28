@@ -34,7 +34,7 @@ const cardBadges = function (t, opts) {
     if (type === 'static') {
       badge.text = 'Static';
     } else if (type === 'dynamic') {
-      badge.text = 'Dynamic' + (Math.random() * 100).toFixed(0).toString();
+      badge.text = 'Dynamic ' + (Math.random() * 100).toFixed(0).toString();
     } else {
       return [];
     }
