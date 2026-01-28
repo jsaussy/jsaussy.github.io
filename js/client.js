@@ -66,7 +66,7 @@ const cardBadges = function (t, opts) {
 const saveAttachment = function (t, options) {
     return {
       callback: function (t, opts) {
-        console.log('Save!);
+        console.log('Save!');
       },
     };
   };
