@@ -120,6 +120,19 @@ TrelloPowerUp.initialize(
           },
         },
         {
+          text: "Open date with default",
+          callback: function (t) {
+            t.popup({
+              type: "date",
+              title: "DaTE!!!!",
+              date: new Date('2020-01-10'),
+              callback: function (t, opts) {
+                console.log(opts.date);
+              },
+            });
+          },
+        },
+        {
           text: "Open list",
           callback: function (t) {
             return t.popup({
