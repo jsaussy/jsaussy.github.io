@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>  
+    <title>TRELLO-GET-TEST</title>
+    <link crossorigin="anonymous" rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+    <script crossorigin="anonymous" src="https://p.trellocdn.com/power-up.min.js"></script>
+    <script>
+      (() => {
+        const tpu = window.TrelloPowerUp;
+        var t = tpu.iframe();
+        t.render(() => {
+          document.getElementById("testButton").addEventListener("click", (e) => {
+            t.popup({
+              title: "Testing Page 1",
+              url: "./popupFrame.html",
+              height: 100,
+              mouseEvent: e,
+            });
+          });
+          t.sizeTo("#content");
+        });
+      })();
+    </script>
+  </head>
+  <body id="content">
+    <p>Click the button to open popup iframe</p>
+    <button id="testButton">Test Button</button>
+  </body>
+</html>
