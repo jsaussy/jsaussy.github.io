@@ -7,7 +7,7 @@
     <script>
       (() => {
         const tpu = window.TrelloPowerUp;
-        var t = tpu.iframe();
+        var t = tpu.iframe({targetOrigin: "https://trellis.coffee"});
         t.render(() => {
           document.getElementById("testButton").addEventListener("click", (e) => {
             t.popup({
