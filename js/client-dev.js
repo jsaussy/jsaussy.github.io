@@ -162,6 +162,14 @@ TrelloPowerUp.initialize(
     "board-buttons": function (t, options) {
       return [
           {
+              text: "Open details",
+              callback: (t) => t.modal({
+                title: "Testing Page 1",
+                url: "./details.html",
+                height: 100,
+              }),
+          },
+          {
           text: "Open Modal",
           icon: {
             dark: "https://jsaussy.github.io/icon-gray.svg",
