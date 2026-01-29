@@ -7,7 +7,7 @@
     <script>
       (() => {
         const tpu = window.TrelloPowerUp;
-        var t = tpu.iframe();
+        var t = tpu.iframe({targetOrigin: "http://localhost:2999/"});
         t.render(async () => {
           console.log("about to do a read all");
           const result = await t.getAll();
