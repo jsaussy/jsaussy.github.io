@@ -133,6 +133,27 @@ TrelloPowerUp.initialize(
           },
         },
         {
+            text: "Open list with static items",
+            callback: function (t) {
+                return t.popup({
+                    title: "List with static items!",
+                    items: [
+                        {
+                            text: "Item 1",
+                        },
+                        
+                        {
+                            text: "Item 2",
+                        },
+                        
+                        {
+                            text: "Item 3",
+                        },
+                    ],
+                });
+            }
+        },
+        {
           text: "Open list",
           callback: function (t) {
             return t.popup({
