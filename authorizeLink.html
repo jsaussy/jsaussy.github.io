@@ -1,16 +1,14 @@
 <html>
-  <head>
-    <script defer>
+  <body>
+    <div id="content">
+      <a id="authorize" href="#">Click to authorize</a>
+    </div>
+  </body>
+      <script defer>
       document.getElementById('authorize').addEventListener("click", (e) => {
         e.preventDefault();
         console.log('auth');
         localStorage.setItem('mockAuthorize', true);
       });
     </script>
-  </head>
-  <body>
-    <div id="content">
-      <a id="authorize" href="#">Click to authorize</a>
-    </div>
-  </body>
 </html>
