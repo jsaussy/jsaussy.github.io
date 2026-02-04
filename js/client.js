@@ -36,6 +36,7 @@ function testButton(trello) {
 
 const attachmentThumbnails = function (t, opts) {
     const url = opts.url;
+    if (url) {
     if (!/localhost/.test(url)) {
         throw t.NotHandled();
   }
@@ -51,6 +52,22 @@ const attachmentThumbnails = function (t, opts) {
     return {
         title: 'Attachment thumbnail capability',
         created: (new Date()).toISOString()
+    }
+    }
+    if (!/emu/.test(opts.name)) {
+        throw t.NotHandled();
+    }
+        if (localStorage.getItem('mockAuthorize') !== "true") {
+        return {
+            initialize: {
+              type: 'iframe',
+              url: t.signUrl(TrelloPowerUp.util.relativeUrl('authorizeLink.html'))
+            }
+        }
+    }
+    return {
+        iconUrl: "https://emoji.slack-edge.com/TE8HJA7RS/emu-approves/b1e49fb67940873a.png",
+        title: "Attachment thumbnail capabilitiy (file)",
     }
 };
 
