@@ -39,7 +39,7 @@ const attachmentThumbnails = function (t, opts) {
     if (!/localhost/.test(url)) {
         throw t.NotHandled();
   }
-    if (localStorage.getItem('mockAuthorization') !== true) {
+    if (localStorage.getItem('mockAuthorize') !== "true") {
         return {
             created: (new Date()).toISOString(),
             initialize: {
