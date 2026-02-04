@@ -34,6 +34,17 @@ function testButton(trello) {
     }
 } 
 
+const attachmentThumbnails = function (t, opts) {
+    const url = opts.url;
+    if (!/localhost/.test(url)) {
+        throw t.NotHandled();
+  }
+    return {
+        title: 'Attachment thumbnail capability',
+        created: (new Date()).toISOString()
+    }
+};
+
 const cardBadges = function (t, opts) {
   return t.card("name")
   .get("name")
@@ -85,20 +96,7 @@ var formatNPSUrl = function (t, url) {
 
 TrelloPowerUp.initialize(
   {
-        "attachment-thumbnail": function (t, options) {
-    var parkName = formatNPSUrl(t, options.url);
-    if (parkName){
-      return {
-        title: parkName,
-        image: {
-          url: 'https://jsaussy.github.io/nps.svg',
-          logo: true
-        }
-      };
-    } else {
-      throw t.NotHandled();
-    }
-  },
+        "attachment-thumbnail": attachmentThumbnails,
             "attachment-sections": function(t, options){
     var claimed = options.entries.filter(function (attachment) {
       return attachment.url.indexOf('https://www.nps.gov/yell/') === 0;
