@@ -39,6 +39,15 @@ const attachmentThumbnails = function (t, opts) {
     if (!/localhost/.test(url)) {
         throw t.NotHandled();
   }
+    if (localStorage.getItem('mockAuthorization') !== true) {
+        return {
+            created: (new Date()).toISOString(),
+            initialize: {
+              type: 'iframe',
+              url: t.signUrl(TrelloPowerUp.util.relativeUrl('authorizeLink.html'))
+            }
+        }
+    }
     return {
         title: 'Attachment thumbnail capability',
         created: (new Date()).toISOString()
