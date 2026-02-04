@@ -47,7 +47,9 @@ const attachmentThumbnails = function (t, opts) {
         }
     }
     return {
-        iconUrl: "https://emoji.slack-edge.com/TE8HJA7RS/emu-approves/b1e49fb67940873a.png",
+        image: {
+            url: "https://emoji.slack-edge.com/TE8HJA7RS/emu-approves/b1e49fb67940873a.png",
+        },
         title: "Attachment thumbnail capabilitiy (file)",
     }
     }
