@@ -35,6 +35,39 @@ t.render(() => {
     });
   });
 
+  document.getElementById('reset-shared-board')?.addEventListener('click', () => {
+    console.log('reset board shared clicked');
+    t.set('board', 'shared', 'stored', 0);
+  });
+  document.getElementById('reset-private-board')?.addEventListener('click', () => {
+    console.log('reset board privaet clicked');
+    t.set('board', 'private', 'stored', 0);
+  });
+  document.getElementById('reset-shared-card')?.addEventListener('click', () => {
+    console.log('reset card shared clicked');
+    t.set('card', 'shared', 'stored', 0);
+  });
+  document.getElementById('reset-private-card')?.addEventListener('click', () => {
+    console.log('reset card privaet clicked');
+    t.set('card', 'private', 'stored', 0);
+  });
+  document.getElementById('reset-shared-member')?.addEventListener('click', () => {
+    console.log('reset member shared clicked');
+    t.set('member', 'shared', 'stored', 0);
+  });
+  document.getElementById('reset-private-member')?.addEventListener('click', () => {
+    console.log('reset member privaet clicked');
+    t.set('member', 'private', 'stored', 0);
+  });
+  document.getElementById('reset-shared-org')?.addEventListener('click', () => {
+    console.log('reset org shared clicked');
+    t.set('organization', 'shared', 'stored', 0);
+  });
+  document.getElementById('reset-private-org')?.addEventListener('click', () => {
+    console.log('reset org privaet clicked');
+    t.set('organization', 'private', 'stored', 0);
+  });
+
   t.getAll().then((data) => {
     const updateElement = (id, newContent, val) => {
       if (val) {
