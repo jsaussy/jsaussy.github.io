@@ -22,7 +22,7 @@ function testButton(trello) {
 const cardBadges = function (t, opts) {
         return [
             {
-                dyanmic: function () {
+                dynamic: function () {
                     console.log('updating badge with no text');
                     return {
                         refresh: 10,
