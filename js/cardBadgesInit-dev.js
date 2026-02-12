@@ -10,6 +10,14 @@ const cardDetailBadges = function (t, opts) {
       .then(function (cardName) {
         console.log("We just loaded the card name for fun: " + cardName);
         return [
+            {
+                dyanmic: function () {
+                    console.log('updating badge with no text');
+                    return {
+                        refresh: 10,
+                    };
+                },
+            },
           {
             // Dynamic badges can have their function rerun
             // after a set number of seconds defined by refresh.
