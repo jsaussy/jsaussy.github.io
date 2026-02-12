@@ -17,10 +17,24 @@ function testButton(trello) {
             alert('test');
         }
     }
-} 
+}
+
+const cardDetailBadges = function (t, opts) {
+        return [
+            {
+                dyanmic: function () {
+                    console.log('updating badge with no text');
+                    return {
+                        refresh: 10,
+                    };
+                },
+            },
+            ];
+};
 
 TrelloPowerUp.initialize(
   {
+      "card-badges": cardDetailBadges,
       "list-sorters": function (t) {
     return t.list('name', 'id')
     .then(function (list) {
