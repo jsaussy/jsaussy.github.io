@@ -19,7 +19,7 @@ function testButton(trello) {
     }
 }
 
-const cardDetailBadges = function (t, opts) {
+const cardBadges = function (t, opts) {
         return [
             {
                 dyanmic: function () {
@@ -34,7 +34,7 @@ const cardDetailBadges = function (t, opts) {
 
 TrelloPowerUp.initialize(
   {
-      "card-badges": cardDetailBadges,
+      "card-badges": cardBadges,
       "list-sorters": function (t) {
     return t.list('name', 'id')
     .then(function (list) {
