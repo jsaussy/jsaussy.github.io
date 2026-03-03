@@ -117,11 +117,11 @@ t.render(() => {
 
     document.getElementById('increase-shared-org')?.addEventListener('click', () => {
       console.log('increase org shared clicked');
-      t.set('org', 'shared', 'stored', (pluginData.organization?.shared?.stored ?? 0) + 1);
+      t.set('organization', 'shared', 'stored', (pluginData.organization?.shared?.stored ?? 0) + 1);
     });
     document.getElementById('increase-private-org')?.addEventListener('click', () => {
       console.log('increase org private clicked');
-      t.set('org', 'private', 'stored', (pluginData.organization?.private?.stored ?? 0) + 1);
+      t.set('organization', 'private', 'stored', (pluginData.organization?.private?.stored ?? 0) + 1);
     });
   });
 });
