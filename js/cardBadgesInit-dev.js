@@ -100,6 +100,27 @@ const cardDetailBadges = function (t, opts) {
 TrelloPowerUp.initialize(
   {
     "card-badges": cardDetailBadges,
+    "card-back-section": function(t, options){
+        return {
+          title: 'My Card Back Section',
+          icon: "https://jsaussy.github.io/icon-gray.svg",
+          content: {
+            type: 'iframe',
+            url: t.signUrl('./modal-dev.html'),
+            height: 500,
+          },
+          action: {
+            text: 'My Action',
+            callback: (t) =>  t.popup({
+                title: 'Iframe popup',
+                url: './popupIframe.html',
+                args: { text: 'Hello' },
+                height: 278, // initial height, can be changed later,
+                callback: function (t, opts) {console.log("hide");console.log(opts);},
+            })
+          }    
+        };
+      },
   },
   { targetOrigin: "http://localhost:2999/" }
 );
