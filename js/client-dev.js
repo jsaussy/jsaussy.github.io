@@ -162,28 +162,8 @@ TrelloPowerUp.initialize(
     "card-detail-badges": cardDetailBadges,
     "card-buttons": function (t, options) {
       return [
-          function listWithBack(t, opts) {
-                return t.popup({
-              title: "List!",
-              items: [
-                {
-                  text: "Item 1",
-                  callback: function (t, opts) {
-                    console.log("Item 1");
-                  },
-                },
-                                  {
-                  text: "Another popup list",
-                  callback: listWithThreeItemsAndBack,
-                },
-                {
-                  text: "Back",
-                  callback: function (t, opts) {
-                    t.back();
-                  },
-                },
-              ],
-            });
+          text: "List with back",
+          callback: listWithBack,
 },
         {
           text: "Open confirm",
