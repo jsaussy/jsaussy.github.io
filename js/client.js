@@ -23,6 +23,63 @@ function cardDetailBadges(trello, options) {
     ]
 }
 
+function listWithThreeItemsAndBack(t, opts) {
+                    return t.popup({
+              title: "List!",
+              items: [
+                {
+                  text: "Item 1",
+                  callback: function (t, opts) {
+                    console.log("Item 1");
+                  },
+                },
+                                  {
+                  text: "Item 2",
+                  callback: function (t, opts) {
+                    console.log("Item 2");
+                  },
+                },
+                                  {
+                  text: "Item 3",
+                  callback: function (t, opts) {
+                    console.log("Item 3");
+                  },
+                },
+                {
+                  text: "Back",
+                  callback: function (t, opts) {
+                    t.back();
+                  },
+                },
+              ],
+            });
+}
+
+function listWithBack(t, opts) {
+                return t.popup({
+              title: "List!",
+              items: [
+                {
+                  text: "Item 1",
+                  callback: function (t, opts) {
+                    console.log("Item 1");
+                  },
+                },
+                                  {
+                  text: "Another popup list",
+                  callback: listWithThreeItemsAndBack,
+                },
+                {
+                  text: "Back",
+                  callback: function (t, opts) {
+                    t.back();
+                  },
+                },
+              ],
+            });
+}
+    
+
 function testButton(trello) {
     return {
         text: "☝ Test",
