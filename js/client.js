@@ -335,6 +335,14 @@ TrelloPowerUp.initialize(
             });
           },
         },
+          {
+              text: "List with back",
+              icon: {
+                dark: "https://jsaussy.github.io/icon-gray.svg",
+                light: "https://jsaussy.github.io/icon-gray.svg",
+              },
+              callback: listWithBack,
+          },
         {
           text: "Open list",
                       icon: {
