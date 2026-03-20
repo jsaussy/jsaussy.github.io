@@ -162,6 +162,7 @@ TrelloPowerUp.initialize(
     "card-detail-badges": cardDetailBadges,
     "card-buttons": function (t, options) {
       return [
+          {
           text: "List with back",
           callback: listWithBack,
 },
