@@ -177,7 +177,7 @@ TrelloPowerUp.initialize(
           },
         },
         {
-          text: "Open confirm",
+          text: "Open confirm1",
           callback: function (t) {
             return t.popup({
               title: "Confirm",
