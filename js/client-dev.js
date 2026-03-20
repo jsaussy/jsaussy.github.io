@@ -162,10 +162,20 @@ TrelloPowerUp.initialize(
     "card-detail-badges": cardDetailBadges,
     "card-buttons": function (t, options) {
       return [
-          {
-          text: "List with back",
-          callback: listWithBack,
-},
+        {
+          text: "Open list with back",
+          callback: function (t) {
+            return t.popup({
+              title: "Confirm",
+              type: "confirm",
+              message: "Confirm?",
+              confirmText: "Confirm!",
+              onConfirm: () => {
+                console.log("confirm");
+              },
+            });
+          },
+        },
         {
           text: "Open confirm",
           callback: function (t) {
