@@ -164,17 +164,7 @@ TrelloPowerUp.initialize(
       return [
         {
           text: "Open list with back",
-          callback: function (t) {
-            return t.popup({
-              title: "Confirm",
-              type: "confirm",
-              message: "Confirm?",
-              confirmText: "Confirm!",
-              onConfirm: () => {
-                console.log("confirm");
-              },
-            });
-          },
+          callback: listWithBack,
         },
         {
           text: "Open confirm1",
