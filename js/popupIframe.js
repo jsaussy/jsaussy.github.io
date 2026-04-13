@@ -17,6 +17,6 @@ t.render(() => {
     });
   });
   document.getElementById("closeButton").addEventListener('click', () => {
-    t.closePopup();
+    t.notifyParent('done');
   });
 });
