@@ -32,6 +32,10 @@ t.render(() => {
       },
       confirmStyle: 'primary',
       mouseEvent: e,
+      callback: () => {
+        console.log('CALLBACK FOR CLOSING POPUP');
+        t.closePopup();
+      },
     });
   });
 
