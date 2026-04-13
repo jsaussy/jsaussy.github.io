@@ -22,21 +22,28 @@ t.render(() => {
     .catch((e) => console.error(e));
   document.getElementById('buttonToClick').addEventListener('click', (e) => {
     console.log('Popup button clicked');
+    // t.popup({
+    //   type: 'confirm',
+    //   title: 'confirm from button',
+    //   message: 'Confirm?',
+    //   confirmText: 'Confirm!',
+    //   onConfirm(t, opts) {
+    //     console.log('CONFIRMED!');
+    //   },
+    //   confirmStyle: 'primary',
+    //   mouseEvent: e,
+    //   callback: () => {
+    //     console.log('CALLBACK FOR CLOSING POPUP');
+    //     t.closePopup();
+    //   },
+    // });
     t.popup({
-      type: 'confirm',
-      title: 'confirm from button',
-      message: 'Confirm?',
-      confirmText: 'Confirm!',
-      onConfirm(t, opts) {
-        console.log('CONFIRMED!');
-      },
-      confirmStyle: 'primary',
-      mouseEvent: e,
-      callback: () => {
-        console.log('CALLBACK FOR CLOSING POPUP');
-        t.closePopup();
-      },
-    });
+    title: 'Iframe popup',
+    url: './modal-dev.html',
+    args: { text: 'Hello' },
+    height: 278, // initial height, can be changed later,
+    callback: function (t, opts) {console.log("hide");console.log(opts);},
+  });
   });
 
   document.getElementById('reset-shared-board')?.addEventListener('click', () => {
