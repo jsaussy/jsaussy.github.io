@@ -42,6 +42,7 @@ t.render(() => {
     url: './popupIframe.html',
     args: { text: 'Hello' },
     height: 278, // initial height, can be changed later,
+    mouseEvent: e,
     callback: function (t, opts) {console.log("hide");console.log(opts);},
   });
   });
