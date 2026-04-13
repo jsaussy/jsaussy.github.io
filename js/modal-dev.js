@@ -39,7 +39,7 @@ t.render(() => {
     // });
     t.popup({
     title: 'Iframe popup',
-    url: './modal-dev.html',
+    url: './popupIframe.html',
     args: { text: 'Hello' },
     height: 278, // initial height, can be changed later,
     callback: function (t, opts) {console.log("hide");console.log(opts);},
