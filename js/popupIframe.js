@@ -16,4 +16,7 @@ t.render(() => {
         confirmStyle: 'primary'
     });
   });
+  document.getElementById("closeButton").addEventListener('click', () => {
+    t.closePopup();
+  });
 });
