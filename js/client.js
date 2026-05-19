@@ -331,6 +331,7 @@ TrelloPowerUp.initialize(
               confirmText: "Confirm!",
               onConfirm: () => {
                 console.log("confirm");
+                  return {test: 'test2'};
               },
             });
             return {test: 'test'};
