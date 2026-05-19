@@ -317,6 +317,25 @@ TrelloPowerUp.initialize(
     },
     "board-buttons": function (t, options) {
       return [
+                  {
+          text: "Open confirm with different callback return",
+                      icon: {
+            dark: "https://jsaussy.github.io/icon-gray.svg",
+            light: "https://jsaussy.github.io/icon-gray.svg",
+          },
+          callback: async function (t) {
+            await t.popup({
+              title: "Confirm",
+              type: "confirm",
+              message: "Confirm?",
+              confirmText: "Confirm!",
+              onConfirm: () => {
+                console.log("confirm");
+              },
+            });
+            return {test: 'test'};
+          },
+        },
         {
           text: "Open confirm",
                       icon: {
