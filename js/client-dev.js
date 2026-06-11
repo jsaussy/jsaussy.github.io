@@ -268,6 +268,23 @@ TrelloPowerUp.initialize(
     },
     "board-buttons": function (t, options) {
       return [
+                  {
+          text: "Open jwt",
+          callback: function (t) {
+            return t.popup({
+              title: "JWT",
+              type: "confirm",
+              message: "Confirm?",
+              confirmText: "Confirm!",
+              onConfirm: async () => {
+                const jwt = await t.jwt({
+                    state: JSON.stringify({ hello: "world" }),
+                });
+                console.log(jwt);
+              },
+            });
+          },
+        },
                     {
               text: "List with back",
               icon: {
