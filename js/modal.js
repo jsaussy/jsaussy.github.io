@@ -9,6 +9,9 @@ t.render(() => {
   t.lists("all").then(function (lists) {
       console.log(JSON.stringify(lists, null, 2));
   }).catch(e => console.error(e));
+  t.board().then(function (board) {
+    console.log(JSON.stringify(board, null, 2));
+  }).catch(e => console.error(e));
 });
 
 document.getElementById("modalButton").addEventListener("click", () => {
