@@ -2,6 +2,19 @@
 
 var Promise = TrelloPowerUp.Promise;
 
+const cardBackBadges = function (t, opts) {
+    return t.card("name")
+    .get("name")
+    .then( function (cardName) {
+        console.log(" loaded " + cardName);
+        return [{
+            text: cardName,
+            title: "name",
+            color: "red"
+        }];
+    });
+};
+
 const cardDetailBadges = function (t, opts) {
     let cardAttachments = opts.attachments; // Trello passes you the attachments on the card
     return t
@@ -99,6 +112,7 @@ const cardDetailBadges = function (t, opts) {
 
 TrelloPowerUp.initialize(
   {
+    "card-detail-badges": cardBackBadges,
     "card-badges": cardDetailBadges,
     "card-back-section": function(t, options){
         return {
