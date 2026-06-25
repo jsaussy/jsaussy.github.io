@@ -206,7 +206,7 @@ TrelloPowerUp.initialize(
           "card-back-section": function(t, options){
     return {
       title: 'My Card Back Section',
-      icon: "https://jsaussy.github.io/icon-gray.svg",
+      // icon: "https://jsaussy.github.io/icon-gray.svg",
       content: {
         type: 'iframe',
         url: t.signUrl('./cardBackSection.html'),
