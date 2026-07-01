@@ -4,6 +4,12 @@ const t = window.TrelloPowerUp.iframe({
 
 let pluginData;
 
+t.board('all')
+  .then(function (board) {
+    console.log(JSON.stringify(board, null, 2));
+  })
+  .catch((e) => console.error(e));
+
 t.lists('all')
   .then(function (lists) {
     console.log(JSON.stringify(lists, null, 2));
