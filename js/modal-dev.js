@@ -2,7 +2,47 @@ const t = window.TrelloPowerUp.iframe({
   targetOrigin: 'http://localhost:2999/',
 });
 
-let pluginData;
+let pluginData = {};
+
+    document.getElementById('increase-shared-board')?.addEventListener('click', () => {
+      console.log('increase board shared clicked');
+      t.set('board', 'shared', 'stored', (pluginData.board?.shared?.stored ?? 0) + 1).then((res) => {
+        t.get('board', 'shared', 'stored', 'none').then((boardSharedData) => {
+          console.log(`board data result`, boardSharedData);
+        });
+      });
+    });
+    document.getElementById('increase-private-board')?.addEventListener('click', () => {
+      console.log('increase board private clicked');
+      t.set('board', 'private', 'stored', (pluginData.board?.private?.stored ?? 0) + 1);
+    });
+
+    document.getElementById('increase-shared-card')?.addEventListener('click', () => {
+      console.log('increase card shared clicked');
+      t.set('card', 'shared', 'stored', (pluginData.card?.shared?.stored ?? 0) + 1);
+    });
+    document.getElementById('increase-private-card')?.addEventListener('click', () => {
+      console.log('increase card private clicked');
+      t.set('card', 'private', 'stored', (pluginData.card?.private?.stored ?? 0) + 1);
+    });
+
+    document.getElementById('increase-shared-member')?.addEventListener('click', () => {
+      console.log('increase member shared clicked');
+      t.set('member', 'shared', 'stored', (pluginData.member?.shared?.stored ?? 0) + 1);
+    });
+    document.getElementById('increase-private-member')?.addEventListener('click', () => {
+      console.log('increase member private clicked');
+      t.set('member', 'private', 'stored', (pluginData.member?.private?.stored ?? 0) + 1);
+    });
+
+    document.getElementById('increase-shared-org')?.addEventListener('click', () => {
+      console.log('increase org shared clicked');
+      t.set('organization', 'shared', 'stored', (pluginData.organization?.shared?.stored ?? 0) + 1);
+    });
+    document.getElementById('increase-private-org')?.addEventListener('click', () => {
+      console.log('increase org private clicked');
+      t.set('organization', 'private', 'stored', (pluginData.organization?.private?.stored ?? 0) + 1);
+    });
 
 t.board('all')
   .then(function (board) {
@@ -106,40 +146,5 @@ t.render(() => {
     updateElement('private-member', 'Private member data:', member?.private?.stored);
     updateElement('shared-org', 'Shared org data:', organization?.shared?.stored);
     updateElement('private-org', 'Private org data:', organization?.private?.stored);
-    document.getElementById('increase-shared-board')?.addEventListener('click', () => {
-      console.log('increase board shared clicked');
-      t.set('board', 'shared', 'stored', (pluginData.board?.shared?.stored ?? 0) + 1);
-    });
-    document.getElementById('increase-private-board')?.addEventListener('click', () => {
-      console.log('increase board private clicked');
-      t.set('board', 'private', 'stored', (pluginData.board?.private?.stored ?? 0) + 1);
-    });
-
-    document.getElementById('increase-shared-card')?.addEventListener('click', () => {
-      console.log('increase card shared clicked');
-      t.set('card', 'shared', 'stored', (pluginData.card?.shared?.stored ?? 0) + 1);
-    });
-    document.getElementById('increase-private-card')?.addEventListener('click', () => {
-      console.log('increase card private clicked');
-      t.set('card', 'private', 'stored', (pluginData.card?.private?.stored ?? 0) + 1);
-    });
-
-    document.getElementById('increase-shared-member')?.addEventListener('click', () => {
-      console.log('increase member shared clicked');
-      t.set('member', 'shared', 'stored', (pluginData.member?.shared?.stored ?? 0) + 1);
-    });
-    document.getElementById('increase-private-member')?.addEventListener('click', () => {
-      console.log('increase member private clicked');
-      t.set('member', 'private', 'stored', (pluginData.member?.private?.stored ?? 0) + 1);
-    });
-
-    document.getElementById('increase-shared-org')?.addEventListener('click', () => {
-      console.log('increase org shared clicked');
-      t.set('organization', 'shared', 'stored', (pluginData.organization?.shared?.stored ?? 0) + 1);
-    });
-    document.getElementById('increase-private-org')?.addEventListener('click', () => {
-      console.log('increase org private clicked');
-      t.set('organization', 'private', 'stored', (pluginData.organization?.private?.stored ?? 0) + 1);
-    });
   });
 });
