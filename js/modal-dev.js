@@ -9,6 +9,7 @@ let pluginData = {};
       t.set('board', 'shared', 'stored', (pluginData.board?.shared?.stored ?? 0) + 1).then((res) => {
         t.get('board', 'shared', 'stored', 'none').then((boardSharedData) => {
           console.log(`board data result`, boardSharedData);
+          
         });
       });
     });
