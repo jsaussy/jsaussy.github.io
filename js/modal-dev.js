@@ -4,6 +4,7 @@ const t = window.TrelloPowerUp.iframe({
 
 let pluginData = {};
 
+window.onload(() => {
     document.getElementById('increase-shared-board')?.addEventListener('click', () => {
       console.log('increase board shared clicked');
       t.set('board', 'shared', 'stored', (pluginData.board?.shared?.stored ?? 0) + 1).then((res) => {
@@ -44,7 +45,7 @@ let pluginData = {};
       console.log('increase org private clicked');
       t.set('organization', 'private', 'stored', (pluginData.organization?.private?.stored ?? 0) + 1);
     });
-
+});
 t.board('all')
   .then(function (board) {
     console.log(JSON.stringify(board, null, 2));
