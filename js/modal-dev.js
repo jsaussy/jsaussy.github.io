@@ -4,7 +4,7 @@ const t = window.TrelloPowerUp.iframe({
 
 let pluginData = {};
 
-window.onload(() => {
+window.addEventListener("load", () => {
     document.getElementById('increase-shared-board')?.addEventListener('click', () => {
       console.log('increase board shared clicked');
       t.set('board', 'shared', 'stored', (pluginData.board?.shared?.stored ?? 0) + 1).then((res) => {
