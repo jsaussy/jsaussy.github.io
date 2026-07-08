@@ -58,6 +58,12 @@ t.lists('all')
   })
   .catch((e) => console.error(e));
 
+t.card('all)
+  .then(function (card) {
+    console.log(JSON.stringify(card, null, 2));
+  })
+  .catch((e) => console.error(e));
+
 t.render(() => {
   console.log(t.getContext());
   t.lists('all')
