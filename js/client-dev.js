@@ -79,8 +79,11 @@ const cardBadges = function (t, opts) {
             {
                 dynamic: function () {
                     console.log('updating badge with no text');
+                    t.card('all').then((card) => {
+                        console.log(`card name: ${card.name}`);
+                    });
                     return {
-                        refresh: 10,
+                        refresh: 60,
                     };
                 },
             },
