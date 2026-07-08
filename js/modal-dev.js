@@ -60,6 +60,7 @@ t.lists('all')
 
 t.card('all')
   .then(function (card) {
+    
     console.log(JSON.stringify(card, null, 2));
   })
   .catch((e) => console.error(e));
