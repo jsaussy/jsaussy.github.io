@@ -58,7 +58,7 @@ t.lists('all')
   })
   .catch((e) => console.error(e));
 
-t.card('all)
+t.card('all')
   .then(function (card) {
     console.log(JSON.stringify(card, null, 2));
   })
