@@ -4,6 +4,10 @@ const t = window.TrelloPowerUp.iframe({targetOrigin: "https://trellis.coffee"});
       console.log(JSON.stringify(lists, null, 2));
   }).catch(e => console.error(e));
 
+t.cards("all").then(function (cards) {
+  console.log(JSON.stringify(cards, null, 2));
+}).catch(e => console.error(e));
+
 t.render(() => {
   console.log(t.getContext());
   t.lists("all").then(function (lists) {
