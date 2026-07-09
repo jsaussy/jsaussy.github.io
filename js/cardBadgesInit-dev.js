@@ -7,11 +7,11 @@ const cardBackBadges = function (t, opts) {
     .get("name")
     .then( function (cardName) {
         console.log(" loaded " + cardName);
-        return [{
+        return [[{
             text: cardName,
             title: "name",
             color: "red"
-        }];
+        }]];
     });
 };
 
