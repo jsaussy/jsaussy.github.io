@@ -16,13 +16,14 @@ const cardBackBadges = function (t, opts) {
 };
 
 const cardBadgesNested = function (t, opts) {
-    return [[
+    return [
         {
             text: "Card badges nested",
             icon: "https://jsaussy.github.io/icon-gray.svg",
             color: "green"
-        }
-    ]];
+        },
+        {},
+    ];
 };
 
 const cardDetailBadges = function (t, opts) {
