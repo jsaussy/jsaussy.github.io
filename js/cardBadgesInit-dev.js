@@ -7,12 +7,22 @@ const cardBackBadges = function (t, opts) {
     .get("name")
     .then( function (cardName) {
         console.log(" loaded " + cardName);
-        return [[{
+        return [{
             text: cardName,
             title: "name",
             color: "red"
-        }]];
+        }];
     });
+};
+
+const cardBadgesNested = function (t, opts) {
+    return [[
+        {
+            text: "Card badges nested",
+            icon: "https://jsaussy.github.io/icon-gray.svg",
+            color: "green"
+        }
+    ]];
 };
 
 const cardDetailBadges = function (t, opts) {
@@ -113,7 +123,8 @@ const cardDetailBadges = function (t, opts) {
 TrelloPowerUp.initialize(
   {
     "card-detail-badges": cardBackBadges,
-    "card-badges": cardDetailBadges,
+    // "card-badges": cardDetailBadges,
+    "card-badges": cardBadgesNested,
     "card-back-section": function(t, options){
         return {
           title: 'My Card Back Section',
