@@ -7,6 +7,16 @@ let pluginData = {};
 window.addEventListener("load", () => {
     document.getElementById('increase-shared-board')?.addEventListener('click', () => {
       console.log('increase board shared clicked');
+      let i=0;
+      t.set('board', 'shared', 'jump', i++);
+      t.set('board', 'shared', 'jump', i++);
+      t.set('board', 'shared', 'jump', i++);
+      t.set('board', 'shared', 'jump', i++);
+      t.set('board', 'shared', 'jump', i++);
+      t.set('board', 'shared', 'jump', i++);
+      t.set('board', 'shared', 'jump', i++);
+      t.set('board', 'shared', 'jump', i++);
+      t.set('board', 'shared', 'jump', i++);
       t.set('board', 'shared', 'stored', (pluginData.board?.shared?.stored ?? 0) + 1).then((res) => {
         t.get('board', 'shared', 'stored', 'none').then((boardSharedData) => {
           console.log(`board data result`, boardSharedData);
