@@ -14,9 +14,29 @@ const cardBadges = function (t, opts) {
             }];
 };
 
+const boardButtons = function (t, opts) {
+  return [
+              {
+              text: "Set data",
+              icon: {
+                dark: "https://jsaussy.github.io/icon-gray.svg",
+                light: "https://jsaussy.github.io/icon-gray.svg",
+              },
+              callback: (t) => {
+                t.cards('all').then((cards) => {
+                  cards?.map((card) => {
+                    console.log(JSON.stringify(card, null, 2));
+                  });
+                });
+              },
+          },
+    ];
+};
+
 TrelloPowerUp.initialize(
   {
     "card-badges": cardBadges,
+    "board-buttons": boardButtons,
   },
   { targetOrigin: targetOrigin }
 );
