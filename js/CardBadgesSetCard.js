@@ -25,7 +25,10 @@ const boardButtons = function (t, opts) {
               callback: (t) => {
                 t.cards('all').then((cards) => {
                   cards?.map((card) => {
-                    console.log(JSON.stringify(card, null, 2));
+                    if (card.id) {
+                      const rand = (Math.random() * 100).toFixed(0).toString();
+                      t.set(card.id, 'shared', 'sharedValue', rand);
+                    }
                   });
                 });
               },
