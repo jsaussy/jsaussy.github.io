@@ -1,4 +1,4 @@
-const targetOrigin = document.referrer === 'http://localhost:2999' ? document.referrer : 'https://trellis.coffee/';
+const targetOrigin = document.referrer === 'http://localhost:2999/' ? document.referrer : 'https://trellis.coffee/';
 
 const cardBadges = function (t, opts) {
               return [{
