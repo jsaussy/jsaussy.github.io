@@ -26,7 +26,8 @@ const boardButtons = function (t, opts) {
                 t.cards('all').then((cards) => {
                   cards?.map((card) => {
                     if (card.id) {
-                      const rand = (Math.random() * 100).toFixed(0).toString();
+                      //const rand = (Math.random() * 100).toFixed(0).toString();
+                      const rand = "5";
                       t.set(card.id, 'shared', 'sharedValue', rand);
                     }
                   });
